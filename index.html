@@ -39,6 +39,17 @@
       border-radius: 8px;
       box-shadow: 0 4px 20px rgba(0,0,0,0.15);
     }
+
+    .gif-row {
+      display: flex;
+      gap: 20px;
+      width: 100%;
+    }
+
+    .gif-row img-comparison-slider {
+      flex: 1;
+      min-width: 0;
+    }
   </style>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -93,21 +104,17 @@
   <div class="container">
     <h1>GIF 运动对比</h1>
 
-    <!-- 使用 img-comparison-slider 组件 -->
-    <img-comparison-slider>
-      <!-- 左边的 GIF（方法1） -->
-      <img slot="first" src="./static/videos/ss1_cave_3.gif" alt="Method1" />
-      <!-- 右边的 GIF（方法2） -->
-      <img slot="second" src="./static/videos/02order_cave_3.gif" alt="2" />
-    </img-comparison-slider>
+    <div class="gif-row">
+      <img-comparison-slider>
+        <img slot="first" src="./static/videos/ss1_cave_3.gif" alt="Method1" />
+        <img slot="second" src="./static/videos/02order_cave_3.gif" alt="2" />
+      </img-comparison-slider>
 
-
-    <img-comparison-slider>
-      <!-- 左边的 GIF（方法1） -->
-      <img slot="first" src="./static/videos/02order_cave_3.gif" alt="Method1" />
-      <!-- 右边的 GIF（方法2） -->
-      <img slot="second" src="./static/videos/sf_cave_3.gif" alt="2" />
-    </img-comparison-slider>
+      <img-comparison-slider>
+        <img slot="first" src="./static/videos/02order_cave_3.gif" alt="Method1" />
+        <img slot="second" src="./static/videos/sf_cave_3.gif" alt="2" />
+      </img-comparison-slider>
+    </div>
   </div>
 </section>
 
